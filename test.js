@@ -11,6 +11,7 @@ describe('Checking types', () => {
   const varSymbol = Symbol('foo');
   const varNumber = 256;
   const varString = 'Hello World!';
+  const varArray = [1, 2, 3];
 
   describe('Boolean type', () => {
     test('isBoolean', () => {
@@ -102,6 +103,24 @@ describe('Checking types', () => {
       expect(util.isNotNull(varNull)).toBe(false);
       expect(util.isNotNull(varUndefined)).toBe(true);
       expect(util.isNotNull(varValue)).toBe(true);
+    });
+  });
+
+  describe('Array type', () => {
+    test('isArray', () => {
+      expect(util.isArray(varArray)).toBe(true);
+      expect(util.isArray(varString)).toBe(false);
+      expect(util.isArray(varSymbol)).toBe(false);
+      expect(util.isArray(varNull)).toBe(false);
+      expect(util.isArray(varUndefined)).toBe(false);
+    });
+
+    test('isNotArray', () => {
+      expect(util.isNotArray(varSymbol)).toBe(true);
+      expect(util.isNotArray(varString)).toBe(true);
+      expect(util.isNotArray(varBoolean)).toBe(true);
+      expect(util.isNotArray(varUndefined)).toBe(true);
+      expect(util.isNotArray(varArray)).toBe(false);
     });
   });
 });

@@ -1,6 +1,6 @@
 /**
  * @file index.js
- * @copyright Alaeddine Messadi
+ * @copyright Alaeddine Messadi (https://almessadi.com)
  */
 
 module.exports = {
@@ -16,4 +16,6 @@ module.exports = {
   isNotNull: (arg) => arg !== null,
   isUndefined: (arg) => typeof arg === 'undefined',
   isNotUndefined: (arg) => typeof arg !== 'undefined',
+  isArray: (arg) => ((Array.isArray) ? Array.isArray(arg) : Object.prototype.toString.call(arg) === '[object Array]'),
+  isNotArray: (arg) => ((Array.isArray) ? Array.isArray(arg) === false : Object.prototype.toString.call(arg) !== '[object Array]'),
 };
