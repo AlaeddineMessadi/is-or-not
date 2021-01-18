@@ -10,6 +10,8 @@ module.exports = {
   isNotNumber: (arg) => typeof arg !== 'number',
   isString: (arg) => typeof arg === 'string',
   isNotString: (arg) => typeof arg !== 'string',
+  isSymbol: (arg) => typeof arg === 'symbol',
+  isNotSymbol: (arg) => typeof arg !== 'symbol',
   isNull: (arg) => arg === null,
   isNotNull: (arg) => arg !== null,
   isUndefined: (arg) => typeof arg === 'undefined',
