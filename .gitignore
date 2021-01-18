@@ -1,4 +1,4 @@
-# 
+# modules
 node_modules
 
 # Logs
@@ -10,10 +10,6 @@ yarn-error.log*
 
 # IDE - VSCode
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
 # Optional npm cache directory
 .npm

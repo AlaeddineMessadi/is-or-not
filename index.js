@@ -4,7 +4,5 @@
  */
 
 module.exports = {
-  isBoolean : (arg) => {
-  return typeof arg === 'boolean';
-  }
-}
+  isBoolean: (arg) => typeof arg === 'boolean',
+};
