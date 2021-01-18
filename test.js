@@ -1,14 +1,28 @@
-/* global test, expect */
+/* global test, expect, describe */
 /* eslint no-undef: "error" */
 
 const util = require('./index');
 
-test('isBoolean', () => {
-  expect(util.isBoolean(true)).toBe(true);
-  expect(util.isBoolean(1)).toBe(false);
+describe('Boolean type', () => {
+  test('isBoolean', () => {
+    expect(util.isBoolean(true)).toBe(true);
+    expect(util.isBoolean(1)).toBe(false);
+  });
+
+  test('isNotBoolean', () => {
+    expect(util.isNotBoolean('true')).toBe(true);
+    expect(util.isNotBoolean(false)).toBe(false);
+  });
 });
 
-test('isNotBoolean', () => {
-  expect(util.isNotBoolean(true)).toBe(true);
-  expect(util.isNotBoolean(1)).toBe(false);
+describe('Number type', () => {
+  test('isNumber', () => {
+    expect(util.isNumber(1)).toBe(true);
+    expect(util.isNumber('1')).toBe(false);
+  });
+
+  test('isNotNumber', () => {
+    expect(util.isNotNumber('1')).toBe(true);
+    expect(util.isNotNumber(1)).toBe(false);
+  });
 });
