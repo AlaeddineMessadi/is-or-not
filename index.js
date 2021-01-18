@@ -8,4 +8,6 @@ module.exports = {
   isNotBoolean: (arg) => typeof arg !== 'boolean',
   isNumber: (arg) => typeof arg === 'number',
   isNotNumber: (arg) => typeof arg !== 'number',
+  isString: (arg) => typeof arg === 'string',
+  isNotString: (arg) => typeof arg !== 'string',
 };

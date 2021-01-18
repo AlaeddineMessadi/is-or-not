@@ -26,3 +26,15 @@ describe('Number type', () => {
     expect(util.isNotNumber(1)).toBe(false);
   });
 });
+
+describe('String type', () => {
+  test('isString', () => {
+    expect(util.isString('1')).toBe(true);
+    expect(util.isString(1)).toBe(false);
+  });
+
+  test('isNotString', () => {
+    expect(util.isNotString(1)).toBe(true);
+    expect(util.isNotString('1')).toBe(false);
+  });
+});
