@@ -38,3 +38,34 @@ describe('String type', () => {
     expect(util.isNotString('1')).toBe(false);
   });
 });
+
+describe('Undefined type and Null', () => {
+  const varNull = null;
+  let varUndefined;
+  const varValue = 0;
+
+  test('isUndefined', () => {
+    expect(util.isUndefined(varUndefined)).toBe(true);
+    expect(util.isUndefined(varNull)).toBe(false);
+    expect(util.isUndefined(varValue)).toBe(false);
+  });
+
+  test('isNotUndefined', () => {
+    expect(util.isNotUndefined(varUndefined)).toBe(false);
+    expect(util.isNotUndefined(varNull)).toBe(true);
+    expect(util.isNotUndefined(varValue)).toBe(true);
+  });
+
+  // test for Null
+  test('isNull', () => {
+    expect(util.isNull(varNull)).toBe(true);
+    expect(util.isNull(varUndefined)).toBe(false);
+    expect(util.isNull(varValue)).toBe(false);
+  });
+
+  test('isNotNull', () => {
+    expect(util.isNotNull(varNull)).toBe(false);
+    expect(util.isNotNull(varUndefined)).toBe(true);
+    expect(util.isNotNull(varValue)).toBe(true);
+  });
+});
