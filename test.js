@@ -123,4 +123,25 @@ describe('Checking types', () => {
       expect(util.isNotArray(varArray)).toBe(false);
     });
   });
+
+  describe('Primitive types', () => {
+    test('isPrimitive', () => {
+      expect(util.isPrimitive(varBoolean)).toBe(true);
+      expect(util.isPrimitive(varString)).toBe(true);
+      expect(util.isPrimitive(varNumber)).toBe(true);
+      expect(util.isPrimitive(varSymbol)).toBe(true);
+      expect(util.isPrimitive(varNull)).toBe(true);
+      expect(util.isPrimitive(varUndefined)).toBe(true);
+      expect(util.isPrimitive(varArray)).toBe(false);
+    });
+
+    test('isNotPrimitive', () => {
+      expect(util.isNotPrimitive(varString)).toBe(false);
+      expect(util.isNotPrimitive(varBoolean)).toBe(false);
+      expect(util.isNotPrimitive(varSymbol)).toBe(false);
+      expect(util.isNotPrimitive(varUndefined)).toBe(false);
+      expect(util.isNotPrimitive(varNull)).toBe(false);
+      expect(util.isNotPrimitive(varArray)).toBe(true);
+    });
+  });
 });

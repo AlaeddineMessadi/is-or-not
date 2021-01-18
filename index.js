@@ -18,4 +18,6 @@ module.exports = {
   isNotUndefined: (arg) => typeof arg !== 'undefined',
   isArray: (arg) => ((Array.isArray) ? Array.isArray(arg) : Object.prototype.toString.call(arg) === '[object Array]'),
   isNotArray: (arg) => ((Array.isArray) ? Array.isArray(arg) === false : Object.prototype.toString.call(arg) !== '[object Array]'),
+  isPrimitive: (arg) => (arg === null || typeof arg === 'string' || typeof arg === 'number' || typeof arg === 'boolean' || typeof arg === 'symbol' || typeof arg === 'undefined'),
+  isNotPrimitive: (arg) => (arg !== null && typeof arg !== 'string' && typeof arg !== 'number' && typeof arg !== 'boolean' && typeof arg !== 'symbol' && typeof arg !== 'undefined'),
 };
