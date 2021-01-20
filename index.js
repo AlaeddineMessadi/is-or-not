@@ -18,6 +18,12 @@ module.exports = {
   isNotUndefined: (arg) => typeof arg !== 'undefined',
   isArray: (arg) => ((Array.isArray) ? Array.isArray(arg) : Object.prototype.toString.call(arg) === '[object Array]'),
   isNotArray: (arg) => ((Array.isArray) ? Array.isArray(arg) === false : Object.prototype.toString.call(arg) !== '[object Array]'),
+  isObject: (arg) => typeof arg === 'object' && arg !== null,
+  isNotObject: (arg) => typeof arg !== 'object',
   isPrimitive: (arg) => (arg === null || typeof arg === 'string' || typeof arg === 'number' || typeof arg === 'boolean' || typeof arg === 'symbol' || typeof arg === 'undefined'),
   isNotPrimitive: (arg) => (arg !== null && typeof arg !== 'string' && typeof arg !== 'number' && typeof arg !== 'boolean' && typeof arg !== 'symbol' && typeof arg !== 'undefined'),
+  isError: (arg) => Object.prototype.toString.call(arg) === '[object Error]' || arg instanceof Error,
+  isNotError: (arg) => Object.prototype.toString.call(arg) !== '[object Error]' || !(arg instanceof Error),
+  isDate: (arg) => Object.prototype.toString.call(arg) === '[object Date]',
+  isNotDate: (arg) => Object.prototype.toString.call(arg) !== '[object Date]',
 };

@@ -12,6 +12,9 @@ describe('Checking types', () => {
   const varNumber = 256;
   const varString = 'Hello World!';
   const varArray = [1, 2, 3];
+  const varObject = { a: 'a' };
+  const varError = new Error();
+  const varDate = new Date();
 
   describe('Boolean type', () => {
     test('isBoolean', () => {
@@ -58,8 +61,9 @@ describe('Checking types', () => {
     });
 
     test('isNotString', () => {
-      expect(util.isNotString(1)).toBe(true);
-      expect(util.isNotString('1')).toBe(false);
+      expect(util.isNotString(varNumber)).toBe(true);
+      expect(util.isNotString(varNull)).toBe(true);
+      expect(util.isNotString(varString)).toBe(false);
     });
   });
 
@@ -142,6 +146,60 @@ describe('Checking types', () => {
       expect(util.isNotPrimitive(varUndefined)).toBe(false);
       expect(util.isNotPrimitive(varNull)).toBe(false);
       expect(util.isNotPrimitive(varArray)).toBe(true);
+    });
+  });
+
+  describe('Object type', () => {
+    test('isObject', () => {
+      expect(util.isObject(varArray)).toBe(true);
+      expect(util.isObject(varObject)).toBe(true);
+      expect(util.isObject(varString)).toBe(false);
+      expect(util.isObject(varSymbol)).toBe(false);
+      expect(util.isObject(varNull)).toBe(false);
+      expect(util.isObject(varUndefined)).toBe(false);
+    });
+
+    test('isNotObject', () => {
+      expect(util.isNotObject(varSymbol)).toBe(true);
+      expect(util.isNotObject(varString)).toBe(true);
+      expect(util.isNotObject(varBoolean)).toBe(true);
+      expect(util.isNotObject(varUndefined)).toBe(true);
+      expect(util.isNotObject(varObject)).toBe(false);
+      expect(util.isNotObject(varArray)).toBe(false);
+    });
+  });
+
+  describe('Error type', () => {
+    test('isObject', () => {
+      expect(util.isError(varError)).toBe(true);
+      expect(util.isError(varObject)).toBe(false);
+      expect(util.isError(varString)).toBe(false);
+      expect(util.isError(varNull)).toBe(false);
+      expect(util.isError(varUndefined)).toBe(false);
+    });
+
+    test('isNotObject', () => {
+      expect(util.isNotError(varSymbol)).toBe(true);
+      expect(util.isNotError(varUndefined)).toBe(true);
+      expect(util.isNotError(varString)).toBe(true);
+      expect(util.isNotError(varError)).toBe(false);
+    });
+  });
+
+  describe('Date type', () => {
+    test('isDate', () => {
+      expect(util.isDate(varDate)).toBe(true);
+      expect(util.isDate(varObject)).toBe(false);
+      expect(util.isDate(varString)).toBe(false);
+      expect(util.isDate(varNull)).toBe(false);
+      expect(util.isDate(varError)).toBe(false);
+    });
+
+    test('isNotDate', () => {
+      expect(util.isNotDate(varSymbol)).toBe(true);
+      expect(util.isNotDate(varUndefined)).toBe(true);
+      expect(util.isNotDate(varString)).toBe(true);
+      expect(util.isNotDate(varDate)).toBe(false);
     });
   });
 });
