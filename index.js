@@ -1,7 +1,13 @@
 /* eslint-disable no-void */
+
 /**
+ * is_isNot
+ *
+ * Javascript type testing library
+ *
  * @file index.js
  * @copyright Alaeddine Messadi (https://almessadi.com)
+ * @license MIT
  */
 
 module.exports = {
@@ -31,4 +37,6 @@ module.exports = {
   isNotDate: (arg) => Object.prototype.toString.call(arg) !== '[object Date]',
   isFunction: (arg) => typeof arg === 'function',
   isNotFunction: (arg) => typeof arg !== 'function',
+  isRegExp: (arg) => Object.prototype.toString.call(arg) === '[object RegExp]',
+  isNotRegExp: (arg) => Object.prototype.toString.call(arg) !== '[object RegExp]',
 };

@@ -15,6 +15,7 @@ describe('Checking types', () => {
   const varObject = { a: 'a' };
   const varError = new Error();
   const varDate = new Date();
+  const varRegExp = new RegExp();
   const varFunction = function func() { };
 
   describe('Boolean type', () => {
@@ -230,6 +231,24 @@ describe('Checking types', () => {
       expect(util.isNotFunction(varDate)).toBe(true);
       expect(util.isNotFunction(varString)).toBe(true);
       expect(util.isNotFunction(varFunction)).toBe(false);
+    });
+  });
+
+  describe('RegExp type', () => {
+    test('isRegExp', () => {
+      expect(util.isRegExp(varRegExp)).toBe(true);
+      expect(util.isRegExp(varUndefined)).toBe(false);
+      expect(util.isRegExp(varString)).toBe(false);
+      expect(util.isRegExp(varNull)).toBe(false);
+      expect(util.isRegExp(varSymbol)).toBe(false);
+    });
+
+    test('isNotRegExp', () => {
+      expect(util.isNotRegExp(varSymbol)).toBe(true);
+      expect(util.isNotRegExp(varString)).toBe(true);
+      expect(util.isNotRegExp(varBoolean)).toBe(true);
+      expect(util.isNotRegExp(varUndefined)).toBe(true);
+      expect(util.isNotRegExp(varRegExp)).toBe(false);
     });
   });
 });
