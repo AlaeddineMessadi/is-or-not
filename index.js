@@ -1,3 +1,4 @@
+/* eslint-disable no-void */
 /**
  * @file index.js
  * @copyright Alaeddine Messadi (https://almessadi.com)
@@ -14,8 +15,10 @@ module.exports = {
   isNotSymbol: (arg) => typeof arg !== 'symbol',
   isNull: (arg) => arg === null,
   isNotNull: (arg) => arg !== null,
-  isUndefined: (arg) => typeof arg === 'undefined',
+  isUndefined: (arg) => typeof arg === 'undefined' && arg === void 0,
   isNotUndefined: (arg) => typeof arg !== 'undefined',
+  isNullOrUndefined: (arg) => arg == null,
+  isNotNullOrUndefined: (arg) => arg != null,
   isArray: (arg) => ((Array.isArray) ? Array.isArray(arg) : Object.prototype.toString.call(arg) === '[object Array]'),
   isNotArray: (arg) => ((Array.isArray) ? Array.isArray(arg) === false : Object.prototype.toString.call(arg) !== '[object Array]'),
   isObject: (arg) => typeof arg === 'object' && arg !== null,
@@ -26,4 +29,6 @@ module.exports = {
   isNotError: (arg) => Object.prototype.toString.call(arg) !== '[object Error]' || !(arg instanceof Error),
   isDate: (arg) => Object.prototype.toString.call(arg) === '[object Date]',
   isNotDate: (arg) => Object.prototype.toString.call(arg) !== '[object Date]',
+  isFunction: (arg) => typeof arg === 'function',
+  isNotFunction: (arg) => typeof arg !== 'function',
 };

@@ -15,6 +15,7 @@ describe('Checking types', () => {
   const varObject = { a: 'a' };
   const varError = new Error();
   const varDate = new Date();
+  const varFunction = function func() { };
 
   describe('Boolean type', () => {
     test('isBoolean', () => {
@@ -108,6 +109,19 @@ describe('Checking types', () => {
       expect(util.isNotNull(varUndefined)).toBe(true);
       expect(util.isNotNull(varValue)).toBe(true);
     });
+
+    // null or Undefined
+    test('isNullOrUndefined', () => {
+      expect(util.isNullOrUndefined(varUndefined)).toBe(true);
+      expect(util.isNullOrUndefined(varNull)).toBe(true);
+      expect(util.isNullOrUndefined(varValue)).toBe(false);
+    });
+
+    test('isNotNullOrUndefined', () => {
+      expect(util.isNotNullOrUndefined(varValue)).toBe(true);
+      expect(util.isNotNullOrUndefined(varUndefined)).toBe(false);
+      expect(util.isNotNullOrUndefined(varNull)).toBe(false);
+    });
   });
 
   describe('Array type', () => {
@@ -200,6 +214,22 @@ describe('Checking types', () => {
       expect(util.isNotDate(varUndefined)).toBe(true);
       expect(util.isNotDate(varString)).toBe(true);
       expect(util.isNotDate(varDate)).toBe(false);
+    });
+  });
+
+  describe('Function type', () => {
+    test('isFunction', () => {
+      expect(util.isFunction(varFunction)).toBe(true);
+      expect(util.isFunction(varObject)).toBe(false);
+      expect(util.isFunction(varString)).toBe(false);
+      expect(util.isFunction(varObject)).toBe(false);
+    });
+
+    test('isNotFunction', () => {
+      expect(util.isNotFunction(varSymbol)).toBe(true);
+      expect(util.isNotFunction(varDate)).toBe(true);
+      expect(util.isNotFunction(varString)).toBe(true);
+      expect(util.isNotFunction(varFunction)).toBe(false);
     });
   });
 });
