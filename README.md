@@ -39,6 +39,8 @@ utils.isNotPrimitive("Not primitive type?"); // type is String => fale
 
 ## Documentation
 
+[documentation page]: https://alaeddinemessadi.github.io/is-or-not/index.html "Documetation Page"
+
 - isArray
 - isBoolean
 - isDate
