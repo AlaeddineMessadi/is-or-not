@@ -8,9 +8,10 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "commit": "cz",
-    "eslint": "eslint '**/*.js' --ignore-pattern node_modules/",
-    "eslint:fix": "eslint '**/*.js' --ignore-pattern node_modules/ --fix"
+    "eslint": "eslint '**/*.js'",
+    "eslint:fix": "eslint '**/*.js' --fix"
   },
   "bugs": {
     "url": "https://github.com/AlaeddineMessadi/utils-is/issues"

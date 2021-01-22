@@ -8,7 +8,7 @@ describe('Checking types', () => {
   let varUndefined;
   const varValue = 0;
   const varBoolean = true;
-  const varSymbol = Symbol('foo');
+  const varSymbol = Symbol('');
   const varNumber = 256;
   const varString = 'Hello World!';
   const varArray = [1, 2, 3];
@@ -122,6 +122,14 @@ describe('Checking types', () => {
       expect(util.isNotNullOrUndefined(varValue)).toBe(true);
       expect(util.isNotNullOrUndefined(varUndefined)).toBe(false);
       expect(util.isNotNullOrUndefined(varNull)).toBe(false);
+    });
+
+    test('isEmpty', () => {
+      expect(util.isEmpty('')).toBe(true);
+      expect(util.isEmpty({})).toBe(true);
+      expect(util.isEmpty([])).toBe(true);
+      expect(util.isEmpty(true)).toBe(false);
+      expect(util.isEmpty(Symbol(''))).toBe(false);
     });
   });
 
