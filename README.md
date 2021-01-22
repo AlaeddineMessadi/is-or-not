@@ -5,6 +5,7 @@
 ## Description
 
 [github](https://github.com/AlaeddineMessadi/is-or-not)
+
 [documentation](https://alaeddinemessadi.github.io/is-or-not/index.html)
 
 A Set of `is` and `isNot` functions in JavaScript checking and testing on objects and types
