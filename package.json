@@ -12,7 +12,7 @@
     "commit": "cz",
     "eslint": "eslint '**/*.js'",
     "eslint:fix": "eslint '**/*.js' --fix",
-    "jsdoc": "./node_modules/.bin/jsdoc -c jsdoc.json -t ./node_modules/docdash --readme ./README.md ./index.js"
+    "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.json"
   },
   "bugs": {
     "url": "https://github.com/AlaeddineMessadi/utils-is/issues"

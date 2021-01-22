@@ -12,7 +12,8 @@
     },
     "ignorePatterns": [
         "**/node_modules/*.js",
-        "**/out/*"
+        "**/out/*",
+        "**/docs/*"
     ],
     "rules": {
     }

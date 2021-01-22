@@ -1,10 +1,43 @@
 {
-  "source": {
-        "include": [ "index.js", "README.md" ],
-        "exclude": [ "test.js", "node_modules/" ]
+  "tags": {
+      "allowUnknownTags": false
+    },
+    "source": {
+      "include": ["./index.js", "README.md"],
+      "includePattern": "\\.js$",
+      "excludePattern": "(node_modules/|docs)"
     },
     "plugins": [
       "plugins/markdown",
       "plugins/summarize"
-  ]
+    ],
+    "opts": {
+      "template": "./node_modules/docdash/",
+      "encoding": "utf8",
+      "destination": "docs/",
+      "recurse": true,
+      "verbose": true
+    },
+    "templates": {
+      "cleverLinks": false,
+      "monospaceLinks": false
+    },
+    "docdash": {
+      "static": true,
+      "sort":  true,
+      "search": true,
+      "collapse": true,
+      "wrap": true,
+      "openGraph": {                  
+          "title": "isOrNot",
+          "type": "website",
+          "image": "",
+          "site_name": "isOrNot",
+          "url": "https://github.com/AlaeddineMessadi/is-or-not"      },
+      "meta": {
+          "title": "isOrNot",
+          "description": "A Set of `is` and `isNot` functions in JavaScript checking and testing on objects and types",
+          "keyword": "javascript, utils, is, isnot, types, test, check, testing, type check, js, library"
+      }
+    }
 }
