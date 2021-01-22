@@ -2,8 +2,8 @@
 
 ## Description
 
-[github]: https://github.com/AlaeddineMessadi/is-or-not
-[documentation]: https://alaeddinemessadi.github.io/is-or-not/index.html
+[github](https://github.com/AlaeddineMessadi/is-or-not)
+[documentation](https://alaeddinemessadi.github.io/is-or-not/index.html)
 
 A Set of `is` and `isNot` functions in JavaScript checking and testing on objects and types
 
@@ -42,7 +42,7 @@ utils.isNotPrimitive("Not primitive type?"); // type is String => fale
 
 ## Documentation
 
-[documentation]: https://alaeddinemessadi.github.io/is-or-not/index.html "Documetation Page"
+[documentation](https://alaeddinemessadi.github.io/is-or-not/index.html)
 
 - isArray
 - isBoolean
