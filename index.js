@@ -17,6 +17,7 @@
 const utils = {};
 
 /**
+ * @constructor
  * @name isBoolean
  * @description Check if a given argument is type Boolean
  * @function
