@@ -1,6 +1,6 @@
 {
   "name": "is-or-not",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "A Set of `is` and `isNot` functions in JavaScript checking and testing on objects and types",
   "main": "index.js",
   "repository": "git@github.com:AlaeddineMessadi/is-or-not.git",
