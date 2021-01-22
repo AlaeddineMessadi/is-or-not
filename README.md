@@ -1,5 +1,7 @@
 # IsOrNot
 
+[![Build Status](https://travis-ci.com/AlaeddineMessadi/is-or-not.svg?branch=main)](https://travis-ci.com/AlaeddineMessadi/is-or-not)
+
 ## Description
 
 [github](https://github.com/AlaeddineMessadi/is-or-not)
