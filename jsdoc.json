@@ -38,6 +38,13 @@
           "title": "isOrNot",
           "description": "A Set of `is` and `isNot` functions in JavaScript checking and testing on objects and types",
           "keyword": "javascript, utils, is, isnot, types, test, check, testing, type check, js, library"
-      }
+      },
+      "menu": {
+          "Project Website": {
+              "href":"https://github.com/AlaeddineMessadi/is-or-not",
+              "target":"_blank",
+              "class":"menu-item",
+              "id":"website_link"
+          }
     }
 }
