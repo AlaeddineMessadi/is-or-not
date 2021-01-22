@@ -40,7 +40,7 @@
           "keyword": "javascript, utils, is, isnot, types, test, check, testing, type check, js, library"
       },
       "menu": {
-          "Project Website": {
+          "Github": {
               "href":"https://github.com/AlaeddineMessadi/is-or-not",
               "target":"_blank",
               "class":"menu-item",
