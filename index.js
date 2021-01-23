@@ -1,5 +1,22 @@
-/* eslint-disable no-prototype-builtins */
-/* eslint-disable no-void */
+/*
+The MIT License (MIT)
+Copyright (c) 2020-2021 Alaeddine Messadi <alaeddine.messadi@gmail.com>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
 
 /**
  * isNot
@@ -114,6 +131,7 @@ utils.isNotNull = (arg) => arg !== null;
  * @param {*} arg value to be test
  * @returns {Boolean} return true when value is not type Undefined
  */
+// eslint-disable-next-line no-void
 utils.isUndefined = (arg) => typeof arg === 'undefined' && arg === void 0;
 
 /**
@@ -280,6 +298,7 @@ utils.isEmpty = (arg) => {
   if (Object.prototype.toString.call(arg) === '[object Object]') {
     return (Object.keys(arg).length === 0 && arg.constructor === Object);
   }
+  // eslint-disable-next-line no-prototype-builtins
   return (arg.hasOwnProperty('length') ? arg.length === 0 : false);
 };
 
@@ -294,6 +313,7 @@ utils.isNotEmpty = (arg) => {
   if (Object.prototype.toString.call(arg) === '[object Object]') {
     return (Object.keys(arg).length > 0 && arg.constructor === Object);
   }
+  // eslint-disable-next-line no-prototype-builtins
   return (arg.hasOwnProperty('length') ? arg.length > 0 : false);
 };
 
