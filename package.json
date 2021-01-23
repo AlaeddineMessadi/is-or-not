@@ -6,6 +6,15 @@
   "repository": "git@github.com:AlaeddineMessadi/is-or-not.git",
   "author": "Alaeddine Messadi <alaeddine.messadi@gmail.com> (https://almessadi.com)",
   "license": "MIT",
+  "keywords": [
+    "util",
+    "type",
+    "test",
+    "js-utils",
+    "utils-lib",
+    "is",
+    "type-check"
+  ],
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll",
