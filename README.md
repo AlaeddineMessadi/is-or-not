@@ -51,6 +51,7 @@ utils.isNotPrimitive("Not primitive type?"); // type is String => fale
 - isBoolean
 - isDate
 - isEmpty
+- isNotEmpty
 - isError
 - isFunction
 - isNotArray

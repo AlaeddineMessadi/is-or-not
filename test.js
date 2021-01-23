@@ -131,6 +131,16 @@ describe('Checking types', () => {
       expect(util.isEmpty(true)).toBe(false);
       expect(util.isEmpty(Symbol(''))).toBe(false);
     });
+
+    test('isNotEmpty', () => {
+      expect(util.isNotEmpty('not empty string')).toBe(true);
+      expect(util.isNotEmpty({})).toBe(false);
+      expect(util.isNotEmpty({ a: 1 })).toBe(true);
+      expect(util.isNotEmpty([])).toBe(false);
+      expect(util.isNotEmpty([1, 2, 3])).toBe(true);
+      expect(util.isNotEmpty(true)).toBe(false);
+      expect(util.isNotEmpty(Symbol(''))).toBe(false);
+    });
   });
 
   describe('Array type', () => {

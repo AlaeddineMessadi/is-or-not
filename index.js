@@ -271,16 +271,30 @@ utils.isNotRegExp = (arg) => Object.prototype.toString.call(arg) !== '[object Re
 
 /**
  * @name isEmpty
- * @description Check if a given argument is not type 'undefined'
+ * @description Check if a given argument is Empty
  * @function
  * @param {*} arg value to be test
- * @returns {Boolean} return true when value is not type Undefined
+ * @returns {Boolean} return true when value is Empty
  */
 utils.isEmpty = (arg) => {
   if (Object.prototype.toString.call(arg) === '[object Object]') {
     return (Object.keys(arg).length === 0 && arg.constructor === Object);
   }
   return (arg.hasOwnProperty('length') ? arg.length === 0 : false);
+};
+
+/**
+ * @name isNotEmpty
+ * @description Check if a given argument is not Empty
+ * @function
+ * @param {*} arg value to be test
+ * @returns {Boolean} return true when value is not Empty
+ */
+utils.isNotEmpty = (arg) => {
+  if (Object.prototype.toString.call(arg) === '[object Object]') {
+    return (Object.keys(arg).length > 0 && arg.constructor === Object);
+  }
+  return (arg.hasOwnProperty('length') ? arg.length > 0 : false);
 };
 
 module.exports = utils;
