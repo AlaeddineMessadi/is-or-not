@@ -47,35 +47,36 @@ utils.isNotPrimitive("Not primitive type?"); // type is String => fale
 
 [documentation](https://alaeddinemessadi.github.io/is-or-not/index.html)
 
-- isArray
-- isBoolean
-- isDate
-- isEmpty
-- isNotEmpty
-- isError
-- isFunction
-- isNotArray
-- isNotBoolean
-- isNotDate
-- isNotError
-- isNotFunction
-- isNotNull
-- isNotNullOrUndefined
-- isNotNumber
-- isNotObject
-- isNotPrimitive
-- isNotRegExp
-- isNotString
-- isNotSymbol
-- isNotUndefined
-- isNullisNullOrUndefined
-- isNumber
-- isObject
-- isPrimitive
-- isRegExp
-- isString
-- isSymbol
-- isUndefined
+- [isArray](https://alaeddinemessadi.github.io/is-or-not/global.html#isArray)
+- [isBoolean](https://alaeddinemessadi.github.io/is-or-not/global.html#isBoolean)
+- [isDate](https://alaeddinemessadi.github.io/is-or-not/global.html#isDate)
+- [isEmpty](https://alaeddinemessadi.github.io/is-or-not/global.html#isEmpty)
+- [isError](https://alaeddinemessadi.github.io/is-or-not/global.html#isError)
+- [isFunction](https://alaeddinemessadi.github.io/is-or-not/global.html#isFunction)
+- [isNotArray](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotArray)
+- [isNotBoolean](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotBoolean)
+- [isNotDate](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotDate)
+- [isNotEmpty](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotEmpty)
+- [isNotError](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotError)
+- [isNotFunction](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotFunction)
+- [isNotNull](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotNull)
+- [isNotNullOrUndefined](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotNullOrUndefined)
+- [isNotNumber](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotNumber)
+- [isNotObject](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotObject)
+- [isNotPrimitive](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotPrimitive)
+- [isNotRegExp](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotRegExp)
+- [isNotString](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotString)
+- [isNotSymbol](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotSymbol)
+- [isNotUndefined](https://alaeddinemessadi.github.io/is-or-not/global.html#isNotUndefined)
+- [isNull](https://alaeddinemessadi.github.io/is-or-not/global.html#isNull)
+- [isNullOrUndefined](https://alaeddinemessadi.github.io/is-or-not/global.html#isNullOrUndefined)
+- [isNumber](https://alaeddinemessadi.github.io/is-or-not/global.html#isNumber)
+- [isObject](https://alaeddinemessadi.github.io/is-or-not/global.html#isObject)
+- [isPrimitive](https://alaeddinemessadi.github.io/is-or-not/global.html#isPrimitive)
+- [isRegExp](https://alaeddinemessadi.github.io/is-or-not/global.html#isRegExp)
+- [isString](https://alaeddinemessadi.github.io/is-or-not/global.html#isString)
+- [isSymbol](https://alaeddinemessadi.github.io/is-or-not/global.html#isSymbol)
+- [isUndefined](https://alaeddinemessadi.github.io/is-or-not/global.html#isUndefined)
 
 ## Contribution
 
