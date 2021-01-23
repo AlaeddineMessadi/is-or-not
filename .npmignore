@@ -1,9 +1,11 @@
 .github/
 .vscode/
-docs/
+# docs/
 node_modules/
 .eslintrc.json
 .gitignore
-.travis.yaml
+.travis.yml
 .jsdoc.json
-
+.yarn-error.log
+test.js
+jsdoc
