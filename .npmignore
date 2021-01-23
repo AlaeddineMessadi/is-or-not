@@ -1,0 +1,9 @@
+.github/
+.vscode/
+docs/
+node_modules/
+.eslintrc.json
+.gitignore
+.travis.yaml
+.jsdoc.json
+
