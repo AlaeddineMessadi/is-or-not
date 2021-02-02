@@ -29,18 +29,32 @@ const utils = require("is-or-not");
 
 utils.isNull(null); // type is null => true
 utils.isNull(undefined); // type is undefined => false
-utils.isNotNull(["🦄", "🐶", "🐼"]); // type is array => false
-utils.isNotNull(null); // type is null => false
+utils.isNotNull(undefined); // correct it's undefined=> true
+
+utils.isNotEmpty(["🦄", "🐶", "🐼"]); // array contain values => false
+utils.isNotEmpty([]); // array is empty => false
 
 /** ... */
 
 utils.isString("Hello World!"); // Type is String => true
-utils.isNotString(["🐶", "🦄"]); // type is array => false
+utils.isNotString(["🐶", "🦄"]); // true because type is array  => true
 
 /** ... */
 
-utils.isPrimitive("Primitive type?"); // type is String => true
-utils.isNotPrimitive("Not primitive type?"); // type is String => fale
+utils.isPrimitive("Primitive type?"); // String is a Primitive type => true
+utils.isNotPrimitive("Not primitive type?"); // False because it's a string, primitive => false
+
+/** ... */
+
+utils.isNullOrUndefined("Hello!"); // String is not null or undefined => false
+utils.isNullOrUndefined(undefined); // => true
+
+utils.isNotNullOrUndefined("Not primitive type?"); // true it's a string => true
+utils.isNotNullOrUndefined(null); // it is null => false
+
+.
+.
+.
 ```
 
 ## Documentation
