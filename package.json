@@ -32,7 +32,7 @@
     "docdash": "^1.2.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.0",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "jsdoc": "^3.6.6"
