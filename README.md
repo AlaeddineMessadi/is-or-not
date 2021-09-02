@@ -29,15 +29,15 @@ const utils = require("is-or-not");
 
 utils.isNull(null); // type is null => true
 utils.isNull(undefined); // type is undefined => false
-utils.isNotNull(undefined); // correct it's undefined=> true
+utils.isNotNull(undefined); // correct it's undefined => true
 
-utils.isNotEmpty(["🦄", "🐶", "🐼"]); // array contain values => false
+utils.isNotEmpty(["🦄", "🐶", "🐼"]); // array contain values => true
 utils.isNotEmpty([]); // array is empty => false
 
 /** ... */
 
 utils.isString("Hello World!"); // Type is String => true
-utils.isNotString(["🐶", "🦄"]); // true because type is array  => true
+utils.isNotString(["🐶", "🦄"]); // true because type is array => true
 
 /** ... */
 
